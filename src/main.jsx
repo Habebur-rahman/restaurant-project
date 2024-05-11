@@ -9,6 +9,7 @@ import Main from './Layout/Main/Main.jsx';
 import Home from './Pages/Home/Home.jsx';
 import Menu from './Pages/Menu/Menu/Menu.jsx';
 import {  HelmetProvider } from 'react-helmet-async';
+import Order from './Pages/Order/Order.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
            path:"/menu",
            element:<Menu></Menu>
+      },
+      {
+        path:"/order",
+        element:<Order></Order>
       }
     ],
   },

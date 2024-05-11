@@ -14,7 +14,7 @@ const Navbar = () => {
       <li><a>Contact us </a></li>
       <li><a>Dashboard</a></li>
       <li><Link to="/menu">Our menu</Link></li>
-      <li><a>Our shop</a></li>
+      <li><Link to="/order">Order Now</Link></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">Food Restaurant</a>
@@ -25,7 +25,7 @@ const Navbar = () => {
       <li><a>Contact us </a></li>
       <li><a>Dashboard</a></li>
       <li><Link to="/menu">Our menu</Link></li>
-      <li><a>Our shop</a></li>
+      <li><Link to="/order">Order Now</Link></li>
       
     </ul>
   </div>
