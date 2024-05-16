@@ -3,6 +3,7 @@ import Cover from "../../../Shared/Cover/Cover";
 import menuImg from '../../../assets/menu/dessert-bg.jpeg';
 import Popularmenu from '../.././Home/category/popularmenu/Popularmenu';
 import Number from "../Number/Number";
+import './Menu.css';
 
 
 const Menu = () => {

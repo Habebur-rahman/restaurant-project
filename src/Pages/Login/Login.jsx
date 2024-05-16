@@ -12,7 +12,7 @@ const Login = () => {
 
      useEffect(()=>{
       loadCaptchaEnginge(5); 
-     }, [])
+     }, []);
 
 
     const handleLogin = event =>{
@@ -22,9 +22,18 @@ const Login = () => {
           const password = form.password.value;
           console.log(email, password);
 
-          // form.email.value = '';
-          // form.password.value = '';
+
+
+
+        // form.email.value = '';
+        // form.password.value = '';
+        // captchaRef.current.value = '';
+                  
+         
+          
     };
+       
+    
 
      const handleValidateCaptcha = () => {
         const user_captcha_value =  captchaRef.current.value;
@@ -34,7 +43,8 @@ const Login = () => {
         else{
            setDisabled(true);
         }
-        // captchaRef.current.value = '';
+        
+       
      };
 
     return (
@@ -43,16 +53,16 @@ const Login = () => {
             <title>Restaurant | Login </title>
             </Helmet>
             <div className="hero min-h-screen bg-base-300 ">
-  <div className="hero-content flex">
+  <div className="hero-content login-container flex">
     <div className="">
     <img src={img}  alt="" />
     </div>
   
     <div className="card w-full max-w-sm shadow-2xl bg-base-300">
-    <h1 className="text-3xl font-bold text-center mt-2">Login now</h1>
+    <h1 className="text-3xl font-bold text-center mt-1">Login now</h1>
       <form onSubmit={handleLogin} className="card-body">
       
-        <div className="form-control">
+        <div  className="form-control">
         
           <label className="label">
             <span className="label-text">Email</span>
@@ -64,9 +74,6 @@ const Login = () => {
             <span className="label-text">Password</span>
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-          <label className="label">
-            <Link to="#" className="label-text-alt link link-hover">Forgot password?</Link>
-          </label>
         </div>
 
 
@@ -82,9 +89,11 @@ const Login = () => {
 
 
         <div className="form-control mt-3">
-          <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
+          <input disabled={disabled}  className="btn btn-primary" type="submit" value="Login" />
         </div>
+        <p className="text-center uppercase hover:underline"><small>New Here? <Link to={"/signup"}>Create an account</Link></small></p>
       </form>
+      
     </div>
   </div>
 </div>
